@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/admin/css/base.css">
+</head>
+
+<body>
+    <div class="login-body">
+        <div class="login-container">
+            <h4 class="title">Login Form</h4>
+            <div class="login">
+                <form action="/admin/login" method="POST" id="loginform">
+                    <div class="alert alert-danger" role="alert"></div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="Email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="Password" name="password">
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+            <div class="tips"></div>
+        </div>
+    </div>
+    <script src="/admin/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/admin/js/common.js"></script>    
+    <script type="text/javascript">
+        $('#loginform').on('submit',function(){
+            // serializes form data to JSON
+            var result = serializeToJson($(this));
+
+            // validates email address and password
+            // $.trim() removes spaces from the beginning and end of strings
+            if (result.email.trim().length == 0) {
+                // alert('Please enter your email address');
+                $('.alert').show();
+                $('.alert').text('Please enter your email address');
+
+                // stops submitting the form
+                return false;
+            }
+
+            if (result.password.trim().length == 0) {
+                $('.alert').show();
+                $('.alert').text('Please enter your password');
+                return false;
+            }
+        })
+    </script>
+</body>
+
+</html>

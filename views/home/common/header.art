@@ -1,0 +1,19 @@
+<!-- header-->
+    <div class="header">
+        <div class="w1100">
+            <!-- logo -->
+            <h1 class="logo fl">
+                <a href="/home/">Map</a>
+            </h1>
+
+            <!-- navigation bar -->
+            <ul class="navigation fr">
+                <li>
+                    <a class="active" href="/home/">Home</a>
+                </li>
+                <li>
+                    <a href="/admin/login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>

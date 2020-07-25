@@ -1,0 +1,21 @@
+const { Article } = require('../../model/article');
+
+const formidable = require("formidable");
+
+const path = require('path');
+
+module.exports = (req, res) => {
+    const form = new formidable.IncomingForm();
+    form.uploadDir = path.join(__dirname, '../', '../', 'public', 'uploads');
+    form.keepExtensions = true;
+    form.parse(req, async(err, fields, files) => {
+        await Article.updateOne({
+            title: fields.title,
+            author: fields.author,
+            publishDate: fields.publishDate,
+            cover: files.cover.path.split('public')[1],
+            content: fields.content
+        });
+        res.redirect('/admin/article');
+    });
+}

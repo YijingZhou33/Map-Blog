@@ -1,0 +1,170 @@
+body,
+ul,
+h1,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+    font-family: 'Arial';
+    background: #f5f5f5;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #663F51;
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: #BB97A8;
+}
+
+input,
+textarea {
+    border: 1px solid #ccc;
+    outline: none;
+    color: #555;
+    font-family: inherit;
+}
+
+input {
+    padding: 0;
+}
+
+textarea {
+    padding: 10px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.pr {
+    position: relative;
+}
+
+.pa {
+    position: absolute;
+}
+
+.layoutItem {
+    padding-bottom: 32767px;
+    margin-bottom: -32767px;
+}
+
+.mb10 {
+    margin: 10px 0;
+    border-top: 1px solid #663F51;
+}
+
+.w1100 {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* header */
+
+.header {
+    width: 100%;
+    min-width: 1100px;
+    height: 50px;
+    background-color: #BB97A8;
+}
+
+.header .w1100 {
+    height: 50px;
+}
+
+
+/* logo*/
+
+.logo {
+    width: 175px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.logo a:hover {
+    color: #F0F3F6;
+}
+
+
+/* navigation bar */
+
+.navigation {
+    height: 50px;
+}
+
+.navigation li {
+    height: 50px;
+    float: left;
+}
+
+.navigation li a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 26px;
+    color: #FFF;
+    font-size: 14px;
+    transition: all 0.4s;
+}
+
+.navigation li a:hover,
+.navigation li .active {
+    background-color: #663F51;
+}
+
+
+/* map list*/
+
+.article-info {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.article-info span {
+    float: left;
+    padding-right: 6px;
+    margin-right: 6px;
+    position: relative;
+}
+
+.article-info span:not(:last-child):after {
+    content: '';
+    width: 1px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    background: #3f434c;
+}
+
+.article-info .author {
+    color: #BB97A8;
+}
+
+
+/* map title */
+
+.article-title {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Garamond';
+}
